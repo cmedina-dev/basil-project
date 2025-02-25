@@ -1,0 +1,105 @@
+/* @link https://utopia.fyi/type/calculator?c=320,18,1.2,1080,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+:root {
+    /* ... (your Utopia.fyi variables) ... */
+    --step--2: clamp(0.7813rem, 0.7734rem + 0.0395vw, 0.8rem);
+    --step--1: clamp(0.9375rem, 0.9112rem + 0.1316vw, 1rem);
+    --step-0: clamp(1.125rem, 1.0724rem + 0.2632vw, 1.25rem);
+    --step-1: clamp(1.35rem, 1.2605rem + 0.4474vw, 1.5625rem);
+    --step-2: clamp(1.62rem, 1.4797rem + 0.7013vw, 1.9531rem);
+    --step-3: clamp(1.944rem, 1.7346rem + 1.0472vw, 2.4414rem);
+    --step-4: clamp(2.3328rem, 2.0301rem + 1.5136vw, 3.0518rem);
+    --step-5: clamp(2.7994rem, 2.3718rem + 2.1376vw, 3.8147rem);
+}
+
+h1 {
+    font-size: var(--step-3);
+    padding: 0;
+    margin: 0;
+}
+
+h2 {
+    font-size: var(--step-0);
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1A2238;
+    min-height: 100vh;
+}
+
+.card {
+    /* Base styles for all screen sizes */
+    display: flex;
+    flex-direction: column;
+    margin: 24px;
+    text-align: center;
+    color: #F0F4F8;
+    background-color: #263248;
+    padding: 16px;
+    border-radius: 4px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    max-height: 85dvh;
+
+    /* Default width (for smaller screens) */
+    width: 95%; /* Start at 95% of the parent (body) */
+    max-width: 500px; /*  Add a reasonable maximum width */
+}
+
+/* Styles for screens LARGER than 800px */
+@media (min-width: 868px) {
+    .card {
+        max-width: 66dvw;  /*  Limit to 33dvw on larger screens */
+        width: auto;     /* Allow the card to shrink if its content is smaller */
+    }
+}
+
+@media (min-width: 1100px) {
+    .card {
+        max-width: 33dvw;  /*  Limit to 33dvw on larger screens */
+        width: auto;     /* Allow the card to shrink if its content is smaller */
+    }
+}
+
+.card h2 {
+    margin-bottom: 8px;
+}
+
+.card img {
+    /* Correct responsive image handling */
+    max-width: 100%; /* Must be 100% of the card. */
+    height: 100%;    /* Maintain aspect ratio. */
+    object-fit: contain; /* Fit within the card, no overflow. */
+    display: block;     /* Remove extra space below inline images. */
+}
+
+.card button {
+    margin-top: 24px;
+    background-color: #40537c;
+    color: #F0F4F8;
+    font: inherit;
+    border: none;
+    border-radius: 4px;
+    padding: 16px;
+    width: auto;      /* Allow the width to adjust to the button text. */
+    max-width: 100%; /* Ensure button doesn't overflow card */
+}
+
+.card button:hover {
+    cursor: pointer;
+}
+
+.card button:active {
+    background-color: #1A2238;
+}
