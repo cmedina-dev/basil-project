@@ -34,7 +34,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #1A2238;
+    background-color: #153528;
     min-height: 100vh;
 }
 
@@ -44,8 +44,8 @@ body {
     flex-direction: column;
     margin: 24px;
     text-align: center;
-    color: #F0F4F8;
-    background-color: #263248;
+    color: #D8F3DC;
+    background-color: #22503e;
     padding: 16px;
     border-radius: 4px;
     font-weight: bold;
@@ -86,7 +86,7 @@ body {
 
 .card button {
     margin-top: 24px;
-    background-color: #40537c;
+    background-color: #3b8868;
     color: #F0F4F8;
     font: inherit;
     border: none;
