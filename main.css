@@ -60,7 +60,7 @@ body {
 /* Styles for screens LARGER than 800px */
 @media (min-width: 868px) {
     .card {
-        max-width: 66dvw;  /*  Limit to 33dvw on larger screens */
+        /* max-width: 66dvw;  Limit to 33dvw on larger screens */
         width: auto;     /* Allow the card to shrink if its content is smaller */
     }
 }
@@ -79,9 +79,11 @@ body {
 .card img {
     /* Correct responsive image handling */
     max-width: 100%; /* Must be 100% of the card. */
-    height: 100%;    /* Maintain aspect ratio. */
+    height: auto;    /* Maintain aspect ratio.  Crucially, use 'auto' */
     object-fit: contain; /* Fit within the card, no overflow. */
     display: block;     /* Remove extra space below inline images. */
+    max-height: 65vh; /* added max height. */
+
 }
 
 .card button {
