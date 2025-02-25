@@ -87,7 +87,7 @@ body {
 .card button {
     margin-top: 24px;
     background-color: #3b8868;
-    color: #F0F4F8;
+    color: #D8F3DC;
     font: inherit;
     border: none;
     border-radius: 4px;
@@ -101,5 +101,5 @@ body {
 }
 
 .card button:active {
-    background-color: #1A2238;
+    background-color: #153528;
 }
